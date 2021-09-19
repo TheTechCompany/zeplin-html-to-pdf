@@ -36,8 +36,7 @@ There are two ways in which these functions can be deployed to AWS.
 Environment variables:
 
 REGION - AWS region to deploy lambda to
-DEV_FUNCTION - Staging function name
-PROD_FUNCTION - Production function name
+FUNCTION - Lambda function name
 
 1 - Check our `npm run deploy:dev` and `npm run deploy:prod` commands in `package.json` and change it according to your needs. Do not forget to add environment variables (you can find it under `template.yml`) to your lambda function in aws lambda edit page or running [lamba update-function-configuration command](https://docs.aws.amazon.com/cli/latest/reference/lambda/update-function-configuration.html).
 
