@@ -3,6 +3,9 @@ const wkhtmltopdf = require("./utils/wkhtmltopdf");
 const errorUtil = require("./utils/error");
 
 exports.handler = function handler(event, context, callback) {
+    //  Assign API gateway param to event.html
+    event.html = event.queryStringParameters.html; //   Could also be a POST using the body param;
+
     if (!event.html) {
         const errorResponse = errorUtil.createErrorResponse(400, "Validation error: Missing field 'html'.");
         callback(errorResponse);
