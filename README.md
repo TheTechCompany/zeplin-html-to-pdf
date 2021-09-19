@@ -33,6 +33,12 @@ sam local invoke "HtmlToPdf" -e events/example-event.json
 ## Deploying to AWS
 There are two ways in which these functions can be deployed to AWS.
 
+Environment variables:
+
+REGION - AWS region to deploy lambda to
+DEV_FUNCTION - Staging function name
+PROD_FUNCTION - Production function name
+
 1 - Check our `npm run deploy:dev` and `npm run deploy:prod` commands in `package.json` and change it according to your needs. Do not forget to add environment variables (you can find it under `template.yml`) to your lambda function in aws lambda edit page or running [lamba update-function-configuration command](https://docs.aws.amazon.com/cli/latest/reference/lambda/update-function-configuration.html).
 
 2 - Check out `template.yml` file and edit according to your needs then use `sam deploy`.
